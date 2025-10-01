@@ -1,0 +1,195 @@
+<!-- 
+Name: Shatakshi Rathore
+GId:  Srathor
+GNo:  G01545382
+File: index.html
+Purpose: Survey page for assignment 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Survey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Handlee', cursive;
+      background: url("https://www.toptal.com/designers/subtlepatterns/uploads/doodles.png");
+      background-size: 300px;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #87ceeb, #ffb6c1, #ffd700);
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 6px dashed #444;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #222;
+    }
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+      background: #fffaf0;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2em;
+      color: #e75480;
+      margin-bottom: 25px;
+    }
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form input[type="date"],
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: normal;
+    }
+    .buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .buttons input {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 5px;
+      border-radius: 10px;
+      border: 2px solid #e75480;
+      background: #fff0f5;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .buttons input:hover {
+      transform: scale(1.05);
+      background: #ffe4e1;
+    }
+    a.back-link {
+      display: block;
+      margin: 30px auto 0;
+      text-align: center;
+      text-decoration: none;
+      color: #e75480;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Survey Form</h1>
+  </header>
+
+  <section>
+    <h2>We Value Your Feedback!</h2>
+    <form action="#" method="post">
+      <!-- Personal Info -->
+      <label for="fname">First Name*</label>
+      <input type="text" id="fname" name="fname" required>
+
+      <label for="lname">Last Name*</label>
+      <input type="text" id="lname" name="lname" required>
+
+      <label for="address">Street Address*</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="city">City*</label>
+      <input type="text" id="city" name="city" required>
+
+      <label for="state">State*</label>
+      <input type="text" id="state" name="state" required>
+
+      <label for="zip">Zip*</label>
+      <input type="text" id="zip" name="zip" required>
+
+      <label for="phone">Telephone Number*</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">E-mail*</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="date">Date of Survey*</label>
+      <input type="date" id="date" name="date" required>
+
+      <!-- Checkboxes -->
+      <label>What did you like most about the campus?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="liked" value="students"> Students</label>
+        <label><input type="checkbox" name="liked" value="location"> Location</label>
+        <label><input type="checkbox" name="liked" value="campus"> Campus</label>
+        <label><input type="checkbox" name="liked" value="atmosphere"> Atmosphere</label>
+        <label><input type="checkbox" name="liked" value="dorms"> Dorm Rooms</label>
+        <label><input type="checkbox" name="liked" value="sports"> Sports</label>
+      </div>
+
+      <!-- Radio Buttons -->
+      <label>How did you become interested in our university?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="interest" value="friends" required> Friends</label>
+        <label><input type="radio" name="interest" value="television"> Television</label>
+        <label><input type="radio" name="interest" value="internet"> Internet</label>
+        <label><input type="radio" name="interest" value="other"> Other</label>
+      </div>
+
+      <!-- Dropdown -->
+      <label for="recommend">How likely are you to recommend this school?</label>
+      <select id="recommend" name="recommend" required>
+        <option value="" disabled selected>Select</option>
+        <option value="very_likely">Very Likely</option>
+        <option value="likely">Likely</option>
+        <option value="unlikely">Unlikely</option>
+      </select>
+
+      <!-- Raffle -->
+      <label for="raffle">Raffle Numbers (Enter at least 10 numbers between 1-100, comma separated)</label>
+      <input type="text" id="raffle" name="raffle" required placeholder="e.g. 5,12,23,45,...">
+
+      <!-- Additional Comments -->
+      <label for="comments">Additional Comments</label>
+      <textarea id="comments" name="comments" placeholder="Write your thoughts here..."></textarea>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+      </div>
+    </form>
+
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+  </section>
+
+</body>
+</html>
